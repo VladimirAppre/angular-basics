@@ -1,34 +1,18 @@
 <h1>Hello angular</h1>
 
 <button (click)="toggle = !toggle">Toggle</button>
-<!--<button (click)="backgraundToggle = !backgraundToggle">Toggle</button>-->
+<button (click)="toggle= 'str' ">Set str</button>
 
-<!--<div [ngStyle]="{-->
-<!--  width: '200px',-->
-<!--  height: '200px',-->
-<!--  borderRadius: '5px',-->
-<!--  border: '1px solid #ccc',-->
-<!--  background: backgraundToggle ? 'green' : 'red'-->
-<!--}">-->
-<!--</div>-->
-
-
-<!--<p [ngClass]="{-->
-<!--  red: backgraundToggle,-->
-<!--  green: !backgraundToggle-->
-<!--}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nobis?</p>-->
-
-<!--<p-->
-<!--  [class.green]="!backgraundToggle"-->
-<!--  [class.red]="backgraundToggle"-->
-<!--&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, vitae.</p>-->
-
-
-<p *ngIf="toggle; else redP"
-   class="green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, facilis!</p>
-
-<ng-template #redP>
-  <p *ngIf="!toggle"
-     class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, iste!</p>
-</ng-template>
+<div [ngSwitch]="toggle">
+  <p class="red"
+     *ngSwitchCase="false">
+    Lorem ipsum!
+  </p>
+  <p class="green"
+     *ngSwitchCase="true">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, quia.
+  </p>
+  <p *ngSwitchDefault>
+    Lorem ipsum dolor sit.</p>
+</div>
 

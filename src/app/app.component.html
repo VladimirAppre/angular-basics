@@ -1,7 +1,34 @@
 <h1>Hello angular</h1>
 
-<input type="text"
-       [(ngModel)]="title"
->
-<p>{{title}}</p>
+<button (click)="toggle = !toggle">Toggle</button>
+<!--<button (click)="backgraundToggle = !backgraundToggle">Toggle</button>-->
+
+<!--<div [ngStyle]="{-->
+<!--  width: '200px',-->
+<!--  height: '200px',-->
+<!--  borderRadius: '5px',-->
+<!--  border: '1px solid #ccc',-->
+<!--  background: backgraundToggle ? 'green' : 'red'-->
+<!--}">-->
+<!--</div>-->
+
+
+<!--<p [ngClass]="{-->
+<!--  red: backgraundToggle,-->
+<!--  green: !backgraundToggle-->
+<!--}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nobis?</p>-->
+
+<!--<p-->
+<!--  [class.green]="!backgraundToggle"-->
+<!--  [class.red]="backgraundToggle"-->
+<!--&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, vitae.</p>-->
+
+
+<p *ngIf="toggle; else redP"
+   class="green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, facilis!</p>
+
+<ng-template #redP>
+  <p *ngIf="!toggle"
+     class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, iste!</p>
+</ng-template>
 

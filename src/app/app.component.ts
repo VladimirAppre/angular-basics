@@ -8,9 +8,7 @@ import {Component} from '@angular/core';
 
 
 export class AppComponent {
- title = 'asd';
 
-  onInput (event: any) {
-    this.title = event.target.value;
-  }
+  // backgraundToggle = false;
+  toggle = false;
 }

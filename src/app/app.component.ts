@@ -12,14 +12,26 @@ export class AppComponent {
   number = '529';
   arr = [1, 2, 3];
   obj = {name: 'Vasia', age: 23, friends: {name: 'Lesya'}};
+  inputValue = '';
 
-  img = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsm-dQHFmWp9Xw1e-4BfLDr67vBq5cil6OytRJExumqHUzTHVZ';
+  // img = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsm-dQHFmWp9Xw1e-4BfLDr67vBq5cil6OytRJExumqHUzTHVZ';
   constructor() {
-    setTimeout(() => {
-      console.log('Timeout is over');
-      this.img = 'https://angular.io/assets/images/logos/angular/angular.png';
-    }, 5000);
+    // setTimeout(() => {
+    //   console.log('Timeout is over');
+    //   this.img = 'https://angular.io/assets/images/logos/angular/angular.png';
+    // }, 5000);
   }
 
+  onInput(event: KeyboardEvent) {
+    this.inputValue = (<HTMLInputElement>event.target).value;
+  }
+
+  onClick() {
+    console.log('clickMe');
+  }
+
+  onBlur(str: string) {
+this.inputValue = str;
+  }
 
 }

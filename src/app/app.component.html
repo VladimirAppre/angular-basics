@@ -1,18 +1,25 @@
 <h1>Hello angular</h1>
 
-<p>{{title}}</p>
+<!--<p>{{title}}</p>-->
 
-<p><strong>{{number}}</strong></p>
+<!--<p><strong>{{number}}</strong></p>-->
 
-<p><strong>{{arr}}</strong></p>
-<p><strong>name:{{obj.name}}, age: {{obj.age}}</strong></p>
+<!--<p><strong>{{arr}}</strong></p>-->
+<!--<p><strong>name:{{obj.name}}, age: {{obj.age}}</strong></p>-->
 
+<button (click)="onClick()">Click me!</button>
 
-<img [src]="img" alt="">
+<input
+  type="text"
+  (keyup.enter)="onInput($event)"
+  (blur)="onBlur(myInput.value)"
+  #myInput
+>
+<p><strong>{{inputValue}}</strong></p>
 
 <hr>
 <app-post></app-post>
-<app-post></app-post>
+<!--<app-post></app-post>-->
 
 <hr>
 

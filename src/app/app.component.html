@@ -1,23 +1,6 @@
 <h1>Hello angular</h1>
 
-<!--<ul>-->
-<!--  <li *ngFor="let num of arr; let idx = index">-->
-<!--    Index: {{idx +1}}, el: <strong>{{num}}</strong>-->
-
-<!--  </li>-->
-<!--</ul>-->
-
-<ul style="list-style: none">
-  <li *ngFor="let post of objects">
-    <p>{{post.title}}, Author: <b>{{post.author}}</b></p>
-    <ul>
-      <li *ngFor="let comment of post.comments">
-        <div>
-          <small> User: {{comment.name}}</small>
-          <p>Comment: {{comment.text}}</p>
-        </div>
-      </li>
-    </ul>
-  </li>
-</ul>
+<p>
+  {{now |  date: 'long' | lowercase }}
+</p>
 

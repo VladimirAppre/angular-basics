@@ -8,30 +8,9 @@ import {Component} from '@angular/core';
 
 
 export class AppComponent {
-  title = 'Dynamic title';
-  number = '529';
-  arr = [1, 2, 3];
-  obj = {name: 'Vasia', age: 23, friends: {name: 'Lesya'}};
-  inputValue = '';
+ title = 'asd';
 
-  // img = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsm-dQHFmWp9Xw1e-4BfLDr67vBq5cil6OytRJExumqHUzTHVZ';
-  constructor() {
-    // setTimeout(() => {
-    //   console.log('Timeout is over');
-    //   this.img = 'https://angular.io/assets/images/logos/angular/angular.png';
-    // }, 5000);
+  onInput (event: any) {
+    this.title = event.target.value;
   }
-
-  onInput(event: KeyboardEvent) {
-    this.inputValue = (<HTMLInputElement>event.target).value;
-  }
-
-  onClick() {
-    console.log('clickMe');
-  }
-
-  onBlur(str: string) {
-this.inputValue = str;
-  }
-
 }
